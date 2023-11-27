@@ -8,7 +8,7 @@ This application has
 - “High” when accessibility <= 0.25
 - “Medium” when 0.25 < accessibility <= 0.75
 - “Low” when accessibility > 0.75
-#### 3. Maps the "price" of the response to
+#### 3. Maps the 'price' of the response to
 - “Free” when price = 0
 - “Low” when price <= 0.5
 - “High” when price > 0.5
@@ -52,15 +52,15 @@ GET /activity
 POST /user
 body: {
 {
-    "name": "John",
-    "accessibility": "High",
-    "price": "Free"
+    'name': 'John',
+    'accessibility': 'High',
+    'price': 'Free'
 }
 
 Schema: {
-    "name": string
-    "accessibility": string
-    "price": string
+    'name': string
+    'accessibility': string
+    'price': string
 }
 ```
 

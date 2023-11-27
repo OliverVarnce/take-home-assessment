@@ -8,16 +8,6 @@ export interface Activity {
   key: string
 }
 
-export interface MappedActivity {
-  activity: string
-  accessibility: string
-  type: string
-  participants: number
-  price: string
-  link: string
-  key: string
-}
-
 export enum Accessibility {
   Low = 'Low',
   Medium = 'Medium',

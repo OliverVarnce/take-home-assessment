@@ -1,9 +1,13 @@
-import { type Request, type Response } from 'express'
+import { Application } from 'express';
+import { catchErrors } from '../decorators/exceptionHanlder';
+import homeRoutes from './home.routes';
+import activityRoutes from './activity.routes';
+import userRoutes from './user.routes';
 
-class IndexController {
-  getIndex (req: Request, res: Response): void {
-    res.send('Hi Dear!')
-  }
+export default class Routes {
+    constructor(app: Application) {
+        app.use('/', catchErrors(homeRoutes));
+        app.use('/activity', catchErrors(activityRoutes));
+        app.use('/user', catchErrors(userRoutes));
+    }
 }
-
-export default new IndexController()
